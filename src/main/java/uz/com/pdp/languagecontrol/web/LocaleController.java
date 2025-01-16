@@ -24,7 +24,7 @@ public class LocaleController {
 
     @GetMapping("/with-header")
     public String sayHelloWithHeader(
-            @RequestAttribute(name = "Accept-Language", required = false) Locale locale
+            /*@RequestAttribute(name = "Accept-Language", required = false) Locale locale*/
             ){
         return messageSource.getMessage("common.hello", null, LocaleContextHolder.getLocale());
     }
